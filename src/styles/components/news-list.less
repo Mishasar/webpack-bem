@@ -1,0 +1,29 @@
+.news-list {
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 15px;
+  }
+
+  .news-item {
+    width: ~"calc(33% - 15px)";
+    margin: 7px;
+  }
+
+  @media (max-width: 1024px) {
+    .news-item {
+      width: ~"calc(50% - 10px)";
+      margin: 5px;
+    }
+  }
+
+  @media (max-width: 788px) {
+    .news-item {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}

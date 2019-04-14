@@ -1,0 +1,67 @@
+.quantity {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  width: 100px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 9px;
+  padding-right: 9px;
+
+  &_basket {
+    height: auto;
+  }
+
+  &__controls {
+    background-repeat: no-repeat;
+    background-size: 13px;
+    background-position: center;
+    .size(13px);
+
+    &_bg {
+      background-color: #FFFFFF;
+      border: 1px solid #E5E5E5;
+      box-sizing: border-box;
+      border-radius: 4px;
+      .size(22px);
+    }
+
+    &_delete {
+      background-image: url("../../img/q-minus.svg");
+      transition: background .3s ease;
+
+      &:hover {
+        background-size: 13px;
+        background: #EF2D56 url("../../img/q-minus-i.svg") no-repeat center;
+      }
+    }
+
+    &_add {
+      background-image: url("../../img/q-plus.svg");
+      transition: background .3s ease;
+
+      &:hover {
+        background-size: 13px;
+        background: #EF2D56 url("../../img/q-plus-i.svg") no-repeat center;
+      }
+    }
+  }
+
+  &__number {
+    font-weight: bold;
+    font-size: 18px;
+    color: #FFFFFF;
+
+    &_black {
+      font-size: 14px;
+      font-weight: normal;
+      color: #000000;
+    }
+  }
+
+  @media @tablet {
+    width: 70px;
+  }
+
+}

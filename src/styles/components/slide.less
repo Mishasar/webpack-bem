@@ -1,0 +1,74 @@
+.slide {
+  .size(100%);
+  top: 0;
+  left: 0;
+  position: relative;
+  outline: none;
+
+  &.show {
+    position: relative;
+    display: block;
+    z-index: 5;
+  }
+
+  &__wrap-text {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    width: 610px;
+    left: 0;
+    top: 51px;
+    padding: 46px 27px 41px 50px;
+  }
+
+  &__title {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 36px;
+    margin: 0;
+    height: 150px;
+  }
+
+  &__background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    margin-left: 25px;
+    height: 440px;
+  }
+
+  &__btn {
+    margin-top: 40px;
+    margin-left: 0;
+  }
+
+  @media @tablet {
+    &__title {
+      height: 250px;
+    }
+
+    &__wrap-text {
+      position: relative;
+      left: unset;
+      top: unset;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    &__background {
+      margin: 0;
+      height: 300px;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  @media @mobile {
+    &__wrap-text {
+      padding: 24px 15px;
+    }
+  }
+}

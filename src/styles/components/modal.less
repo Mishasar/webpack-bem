@@ -1,0 +1,68 @@
+.modal {
+  box-sizing: border-box;
+  border-bottom: 9px solid #11A9B7;
+  border-radius: 0;
+
+  &__inner {
+    padding: 53px 77px 70px 77px;
+  }
+
+  &__close {
+    position: absolute;
+    content: '';
+    .size(28px);
+    background: url("../../img/icon-close.svg") no-repeat;
+    background-size: contain;
+    border: none;
+    right: 10px;
+    top: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &_type {
+    &_login {
+      width: 500px;
+    }
+  }
+
+  &__link {
+    font-family: Roboto;
+    font-size: 14px;
+    text-decoration-line: underline;
+    color: #0A3F5A;
+
+    &_remember-pass {
+      margin: 14px 0 30px 0;
+      align-self: flex-start;
+    }
+  }
+
+  &__title {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 35px;
+    color: #0A3F5A;
+    margin: 0 0 28px 0;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  @media @mobile {
+    margin: auto 10px;
+
+    &__inner {
+      padding: 20px;
+    }
+
+    &_type {
+      &_login {
+        width: auto;
+      }
+    }
+  }
+}

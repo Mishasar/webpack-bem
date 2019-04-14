@@ -71,14 +71,35 @@ module.exports = {
 				test: /\.(less)$/,
 				use: [
 					MiniCssExtractPlugin.loader,
-					"css-loader",
-					"less-loader"
-				]
+					'css-loader',
+					'less-loader',
+				],
 			},
 			{
-				test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/,
-				use: "url-loader"
-			}
+				test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)/,
+				use: 'url-loader',
+			},
+			{
+				test: /\.(png|jpg|gif|svg)$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							outputPath: 'img',
+							// publicPath: 'assets',
+							name: '[name].[ext]',
+						},
+					},
+				],
+			},
+			{
+				test: /\.html$/,
+				use: [
+					{
+						loader: 'html-loader',
+					},
+				],
+			},
 		],
 	},
 };

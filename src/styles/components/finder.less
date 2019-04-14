@@ -1,0 +1,86 @@
+.finder {
+
+  &__form {
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  &__input {
+    .size(100%, 40px);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    border: 1px solid transparent;
+    font-size: 15px;
+    color: #fff;
+    padding-left: 17px;
+    box-sizing: border-box;
+    transition: border .3s ease;
+
+    &:focus {
+      outline: none;
+      border: 1px solid #11a9b7;
+    }
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+
+  &__submit {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    background: #EF2D56;
+    border-radius: 4px;
+    .size(34px);
+    border: none;
+
+    &:before {
+      .pseudo;
+      background-image: url("../../img/finder.svg");
+      width: 14px;
+      height: 14px;
+      top: 9px;
+      left: 10px;
+    }
+  }
+
+  &__mobile {
+    position: relative;
+    display: none;
+    background: #EF2D56;
+    border-radius: 4px;
+    .size(34px);
+    border: none;
+
+    &:before {
+      .pseudo;
+      background-image: url("../../img/finder.svg");
+      width: 14px;
+      height: 14px;
+      top: 9px;
+      left: 10px;
+    }
+  }
+
+  @media @tablet {
+    &__mobile {
+      display: block;
+    }
+
+    &__form.desktop {
+      display: none;
+    }
+  }
+
+  @media @mobile {
+    &__mobile {
+      .size(28px);
+
+      &:before {
+        top: 7px;
+        left: 8px;
+      }
+    }
+  }
+}

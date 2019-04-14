@@ -1,0 +1,38 @@
+.table {
+  font-size: 15px;
+
+  &__header {
+    font-family: Montserrat;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 24px;
+    color: #0A3F5A;
+  }
+
+  &__link {
+    color: #0A3F5A;
+    text-decoration: none;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      opacity: 0;
+      bottom: 3px;
+      background: #0A3F5A;
+      transition: all .3s ease, opacity .5s ease-out;
+      width: 1px;
+      left: 50%;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+        bottom: -1px;
+        width: 100%;
+        left:0;
+      }
+    }
+  }
+}

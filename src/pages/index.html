@@ -19,6 +19,329 @@
 	</script>
 </head>
 <body>
-<h1>Привет мир</h1>
+<div class="wrapper">
+	<header class="header js-header">
+		<div class="nav-top header__nav-top">
+			<div class="nav-top__inner content">
+				<a href="javascript:void(0)" class="nav-top__item login js-modal-link"
+				   data-izimodal-open=".js-modal-login" data-izimodal-transitionin="fadeInDown">Вход</a>
+				<a href="javascript:void(0)" class="nav-top__item log-out">Прайс-лист</a>
+				<a href="javascript:void(0)" class="nav-top__item price-list ">Прайс-лист</a>
+			</div>
+		</div>
+
+		<div class="header__inner content">
+			<div class="header__top">
+				<a href="javascript:void(0);" class="header__hamburger js-menu-toggle"></a>
+				<a href="/" class="header__logo">
+					<img src="../img/logo.svg" alt="АЗПИ маркет">
+				</a>
+				<div class="header__slogan-block">
+                    <span class="header__slogan-text">Отправляем по всей России
+                        любой транспортной
+                        компанией</span>
+					<i class="header__slogan-icon"></i>
+				</div>
+				<div class="header__contacts-block">
+					<a href="javascript:void(0);" class="header__telephone"><span class="header__telephone-number">+7 (3852) 77-94-83</span></a>
+					<a href="javascript:void(0);" class="header__email">azpi22@bk.ru</a>
+				</div>
+				<div class="finder header__finder">
+					<form class="finder__form desktop">
+						<input class="finder__input" placeholder="Поиск по артикулу">
+						<button class="finder__submit"></button>
+					</form>
+					<a href="javascript:void(0);" class="finder__mobile js-finder-toggle"></a>
+				</div>
+				<div class="header__basket header-basket">
+					<a href="javascript:void(0)" class="header-basket__basket-info">
+						<span class="header-basket__basket-icon"></span>
+						<span class="header-basket__basket-text">В корзине 50 товаров</span>
+						<div class="header-basket__basket-count-wrap">
+							<div class="header-basket__basket-count-text">50</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="header__nav">
+			<div class="content">
+				<ul class="header__nav-bar navbar js-navbar">
+					<li class="navbar__item"><a href="javascript:void(0);" class="navbar__link">О компании</a></li>
+					<li class="navbar__item"><a href="javascript:void(0);" class="navbar__link">Новости</a></li>
+					<li class="navbar__item"><a href="javascript:void(0);" class="navbar__link">Каталог</a></li>
+					<li class="navbar__item"><a href="javascript:void(0);" class="navbar__link">Доставка и оплата </a>
+					</li>
+					<li class="navbar__item"><a href="javascript:void(0);" class="navbar__link">Ценовая политика</a>
+					</li>
+					<li class="navbar__item"><a href="javascript:void(0);" class="navbar__link">Гарантия</a></li>
+					<li class="navbar__item"><a href="javascript:void(0);" class="navbar__link">Партнеры</a></li>
+					<li class="navbar__item"><a href="javascript:void(0);" class="navbar__link">Контакты</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="mobile-menu js-mobile-menu">
+			<div class="nav-top mobile-menu__nav-top">
+				<div class="nav-top__inner content">
+					<a href="javascript:void(0)" class="nav-top__item login js-modal-link"
+					   data-izimodal-open=".js-modal-login" data-izimodal-transitionin="fadeInDown">Вход</a>
+					<a href="javascript:void(0)" class="nav-top__item price-list">Прайс-лист</a>
+					<a href="javascript:void(0)" class="nav-top__menu-toggle js-menu-toggle"></a>
+				</div>
+			</div>
+			<ul class="mobile-menu__nav-bar navbar">
+				<li class="navbar__item"><a href="javascript:void(0);" class="navbar__link">О компании</a></li>
+				<li class="navbar__item"><a href="javascript:void(0);" class="navbar__link">Новости</a></li>
+				<li class="navbar__item"><a href="javascript:void(0);" class="navbar__link">Каталог</a></li>
+				<li class="navbar__item"><a href="javascript:void(0);" class="navbar__link">Доставка и оплата </a>
+				</li>
+				<li class="navbar__item"><a href="javascript:void(0);" class="navbar__link">Ценовая политика</a>
+				</li>
+				<li class="navbar__item"><a href="javascript:void(0);" class="navbar__link">Гарантия</a></li>
+				<li class="navbar__item"><a href="javascript:void(0);" class="navbar__link">Партнеры</a></li>
+				<li class="navbar__item"><a href="javascript:void(0);" class="navbar__link">Контакты</a></li>
+			</ul>
+			<div class="mobile-menu__contacts-block header__contacts-block">
+				<a href="javascript:void(0);" class="header__telephone header__telephone_mode_mobile"><span
+						class="header__telephone-number header__telephone-number_mode_mobile">+7 (3852) 77-94-83</span></a>
+				<a href="javascript:void(0);" class="header__email header__email_mode_mobile">azpi22@bk.ru</a>
+			</div>
+		</div>
+
+		<div class="mobile-menu js-mobile-finder">
+			<div class="nav-top mobile-menu__nav-top">
+				<div class="nav-top__inner content">
+					<a href="javascript:void(0)" class="nav-top__menu-toggle js-finder-toggle"></a>
+				</div>
+			</div>
+
+			<div class="finder mobile-menu__finder">
+				<form class="finder__form">
+					<input class="finder__input" placeholder="Поиск по артикулу">
+					<button class="finder__submit"></button>
+				</form>
+			</div>
+		</div>
+
+		<div class="header__slider content">
+			<div class="slider js-slider">
+				<div class="slide js-slide show">
+					<div class="slide__background" style='background-image: url("../img/slider.jpg")'>
+					</div>
+					<div class="slide__wrap-text js-slide-title">
+						<p class="slide__title">Прямые поставки форсунок
+						                        и распылителей напрямую с завода</p>
+						<a href="javascript:void(0);" class="btn slide__btn">Подробнее</a>
+					</div>
+				</div>
+				<div class="slide js-slide">
+					<div class="slide__background" style='background-image: url("../img/slider-2.png")'>
+					</div>
+					<div class="slide__wrap-text js-slide-title">
+						<p class="slide__title">Второй слайд</p>
+						<a href="javascript:void(0);" class="btn slide__btn">Подробнее</a>
+					</div>
+				</div>
+				<div class="slider__controls">
+					<a href="javascript:void(0);" class="slider__arrow prev js-slider-prev"></a>
+					<a href="javascript:void(0);" class="slider__arrow next js-slider-next"></a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="wrapper__content">
+		<div class="section section_light section_main">
+			<div class="content">
+				<div class="page-title">
+					<span class="page-title__shadow">Каталог</span>
+					<h2 class="page-title__title page-title__title_main">Каталог</h2>
+					<div class="page-title__underline page-title__underline_main"></div>
+					<span class="page-title__subtitle">Выбирайте более чем из 350 модификаций продукции!</span>
+				</div>
+
+				<div class="catalog-list catalog-list_main">
+					<a href="javascript:void(0);" class="catalog-item">
+						<div class="catalog-item__image">
+							<img src="../img/catalog-1.jpg" alt="name">
+						</div>
+						<div class="catalog-item__name-wrap">
+							<span class="catalog-item__name">Форсунки</span>
+						</div>
+					</a>
+
+					<a href="javascript:void(0);" class="catalog-item">
+						<div class="catalog-item__image">
+							<img src="../img/catalog-2.jpg" alt="name">
+						</div>
+						<div class="catalog-item__name-wrap">
+							<span class="catalog-item__name">Распылители</span>
+						</div>
+					</a>
+
+					<a href="javascript:void(0);" class="catalog-item">
+						<div class="catalog-item__image">
+							<img src="../img/catalog-3.jpg" alt="name">
+						</div>
+						<div class="catalog-item__name-wrap">
+							<span class="catalog-item__name">Запасные части</span>
+						</div>
+					</a>
+
+					<a href="javascript:void(0);" class="catalog-item">
+						<div class="catalog-item__image">
+							<img src="../img/catalog-4.jpg" alt="name">
+						</div>
+						<div class="catalog-item__name-wrap">
+							<span class="catalog-item__name">Импортозамещение</span>
+						</div>
+					</a>
+				</div>
+				<div class="section__buttons-block">
+					<a href="javascript:void(0);" class="btn catalog-list_button">Новинки</a>
+					<a href="javascript:void(0);" class="btn catalog-list_button">Популярное</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="section section_dark section_main">
+			<div class="content">
+				<div class="page-title page-title_theme_light">
+					<span class="page-title__shadow">Новости</span>
+					<h2 class="page-title__title page-title__title_main">Новости</h2>
+					<div class="page-title__underline page-title__underline_main"></div>
+				</div>
+
+				<div class="news-list">
+					<div class="news-list__inner">
+						<a href="javascript:void(0);" class="news-item news-item_main">
+							<div class="date-block">
+								<span class="date-block__date-number">14</span>
+								<span class="date-block__date-other">апреля 2018</span>
+							</div>
+							<span class="news-item__title news-item__title_main">Повышение цен на продукцию АЗПИ с 1 июня 2018 года</span>
+							<span class="news-item__get-more"></span>
+						</a>
+						<a href="javascript:void(0);" class="news-item news-item_main">
+							<div class="date-block">
+								<span class="date-block__date-number">12</span>
+								<span class="date-block__date-other">апреля 2018</span>
+							</div>
+							<span class="news-item__title news-item__title_main">Altay Common Rail System</span>
+							<span class="news-item__get-more"></span>
+						</a>
+						<a href="javascript:void(0);" class="news-item news-item_main">
+							<div class="date-block">
+								<span class="date-block__date-number">18</span>
+								<span class="date-block__date-other">марта 2018</span>
+							</div>
+							<span class="news-item__title news-item__title_main">Статус привилегированного поставщика Bosch</span>
+							<span class="news-item__get-more"></span>
+						</a>
+						<a href="javascript:void(0);" class="news-item news-item_main">
+							<div class="date-block">
+								<span class="date-block__date-number">3</span>
+								<span class="date-block__date-other">марта 2018</span>
+							</div>
+							<span class="news-item__title news-item__title_main">Повышение цен на форсунку А-04-011-00-00-03 с 21.10.2016г</span>
+							<span class="news-item__get-more"></span>
+						</a>
+						<a href="javascript:void(0);" class="news-item news-item_main">
+							<div class="date-block">
+								<span class="date-block__date-number">14</span>
+								<span class="date-block__date-other">февраля 2018</span>
+							</div>
+							<span class="news-item__title news-item__title_main">Рабочий визит А.Н. Морозова</span>
+							<span class="news-item__get-more"></span>
+						</a>
+						<a href="javascript:void(0);" class="news-item news-item_main">
+							<div class="date-block">
+								<span class="date-block__date-number">14</span>
+								<span class="date-block__date-other">февраля 2018</span>
+							</div>
+							<span class="news-item__title news-item__title_main">АЗПИ проводит аккредитацию сервисных центров</span>
+							<span class="news-item__get-more"></span>
+						</a>
+					</div>
+				</div>
+				<div class="section__buttons-block">
+					<a href="javascript:void(0);" class="btn">Все новости</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="section section_dark section_main maps js-y-maps" id="map">
+			<div class="content maps__inner">
+				<div class="page-title page-title_theme_light">
+					<span class="page-title__shadow">Карта дилеров</span>
+					<h2 class="page-title__title page-title__title_main">Карта дилеров</h2>
+					<div class="page-title__underline page-title__underline_main"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="footer__inner content">
+			<a href="/" class="footer__logo">
+				<img src="../img/logo.svg" alt="АЗПИ маркет">
+			</a>
+			<ul class="footer__menu-wrap">
+				<li class="footer__menu-item"><a href="javascript:void(0);" class="footer__menu-link">О компании</a>
+				</li>
+				<li class="footer__menu-item"><a href="javascript:void(0);" class="footer__menu-link">Ценовая
+				                                                                                      политика</a>
+				</li>
+				<li class="footer__menu-item"><a href="javascript:void(0);" class="footer__menu-link">Новости</a></li>
+				<li class="footer__menu-item"><a href="javascript:void(0);" class="footer__menu-link">Доставка и
+				                                                                                      оплата</a>
+				</li>
+				<li class="footer__menu-item"><a href="javascript:void(0);" class="footer__menu-link">Каталог</a></li>
+				<li class="footer__menu-item"><a href="javascript:void(0);" class="footer__menu-link">Партнеры</a></li>
+				<li class="footer__menu-item"><a href="javascript:void(0);" class="footer__menu-link">Доставка</a></li>
+				<li class="footer__menu-item"><a href="javascript:void(0);" class="footer__menu-link">Контакты</a></li>
+			</ul>
+			<div class="footer__contacts">
+				<a href="javascript:void(0);" class="footer__telephone">+7 (3852) 77-94-83</a>
+				<a href="javascript:void(0);" class="footer__email">azpi22@bk.ru</a>
+			</div>
+			<a href="javascript:void(0);" class="footer__address">
+				656023, РОССИЯ, Алтайский край, г. Барнаул, пр. Космонавтов, 6/2, офис 2
+			</a>
+		</div>
+		<div class="copyright">
+			<div class="copyright__inner content">
+				<span class="copyright__azpi">2018 © АЗПИ маркет. Все права защищены.</span>
+				<span class="copyright__letsrock">
+                Разработка сайта -
+                <a href="https://www.letsrock.pro" class="copyright__letsrock-logo">
+                    <img src="../img/letsrock-logo.svg" alt="LetsRock">
+                </a>
+            </span>
+			</div>
+		</div>
+	</footer>
+
+	<div class="modal modal_type_login js-modal js-modal-login">
+		<div class="modal__inner">
+			<button data-izimodal-close="" class="modal__close"></button>
+			<h3 class="modal__title">Вход на сайт</h3>
+			<form class="form-block form-block_modal js-form" action="where.php">
+				<div class="form-block__inner form-block__inner_modal">
+					<div class="input-field form-block__input-field">
+						<input name="email" type="text" class="input-field__text" placeholder="Email">
+					</div>
+					<div class="input-field form-block__input-field">
+						<input name="password" type="password" class="input-field__text" placeholder="Пароль">
+					</div>
+					<a href="#" class="modal__link modal__link_remember-pass">Забыли пароль</a>
+					<button class="btn modal__btn">Сохранить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
 </body>
 </html>

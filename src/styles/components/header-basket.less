@@ -1,0 +1,114 @@
+.header-basket {
+  .size(220px, 73px);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__basket-info {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  &__basket-icon {
+    .size(28px);
+    background: #EF2D56;
+    border-radius: 4px;
+    position: relative;
+    display: inline-block;
+    top: 8px;
+
+    &:before {
+      .pseudo;
+      background-image: url("../../img/basket.svg");
+      width: 14px;
+      height: 14px;
+      top: 7px;
+      left: 7px;
+    }
+  }
+
+  &__basket-count-wrap {
+    position: absolute;
+    .size(22px);
+    background: #11A9B7;
+    padding: 1px;
+    border-radius: 50%;
+    top: -13px;
+    right: -12px;
+    text-align: center;
+    display: none;
+  }
+
+  &__basket-count-text {
+    margin: auto;
+    font-size: 13px;
+  }
+
+  &__basket-text {
+
+  }
+
+  @media @desktop {
+    border: none;
+    .size(auto);
+    margin-top: auto;
+    margin-bottom: auto;
+
+    &__basket-count-wrap {
+      display: flex;
+    }
+
+    &__basket-info {
+      height: 34px;
+      margin-right: 10px;
+    }
+
+    &__basket-text {
+      display: none;
+    }
+
+    &__basket-icon {
+      .size(34px);
+      top: 0;
+
+      &:before {
+        top: 11px;
+        left: 9px;
+      }
+    }
+  }
+
+  @media @mobile {
+    &__basket-info {
+      height: 28px;
+      margin-right: 10px;
+    }
+
+    &__basket-text {
+      display: none;
+    }
+
+    &__basket-icon {
+      .size(28px);
+      top: 0;
+
+      &:before {
+        top: 7px;
+        left: 6px;
+      }
+    }
+  }
+
+}

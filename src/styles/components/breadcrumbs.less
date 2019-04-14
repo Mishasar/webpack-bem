@@ -1,0 +1,33 @@
+.breadcrumbs {
+  border-bottom: 1px solid rgba(17, 169, 183, 0.5);
+
+  &__inner{
+    padding-left: 0;
+  }
+
+  &__item {
+    line-height: 18px;
+    font-size: 13px;
+    color: #AAAAAA;
+    position: relative;
+    list-style-type: none;
+    display: inline;
+
+    &:not(:last-child) {
+      &:after {
+        content: ' /';
+      }
+    }
+  }
+
+  &__link {
+    line-height: 18px;
+    font-size: 13px;
+    color: #AAAAAA;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.catalog-list {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  .catalog-item {
+    height: 295px;
+    width: 260px;
+    margin: 13px;
+    display: block;
+  }
+
+  @media @desktop {
+    &_main {
+      width: 600px;
+    }
+  }
+
+  @media @tablet {
+    width: 600px;
+  }
+
+  @media (max-width: 600px) {
+    width: 311px;
+  }
+}

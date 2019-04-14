@@ -1,0 +1,30 @@
+.copyright {
+  background: #0A3F5A;
+  height: 86px;
+
+  &__inner {
+    height: 100%;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__letsrock-logo {
+    top: 5px;
+    position: relative;
+
+    img {
+      width: 102px;
+      height: 22px;
+    }
+  }
+
+  @media @tablet {
+    &__inner {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}

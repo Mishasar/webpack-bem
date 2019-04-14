@@ -1,0 +1,43 @@
+.maps {
+  background-image: url("../../img/map.jpg")!important;
+  background-size: cover!important;
+  background-repeat: no-repeat;
+  height: 781px;
+  padding: 0;
+  position: relative;
+
+  &_contacts {
+    height: 500px;
+    border-bottom: 9px solid #11A9B7;
+  }
+
+  .page-title {
+    pointer-events: none;
+  }
+
+  &_partner {
+    margin-top: 77px;
+  }
+
+  &__inner {
+    position: relative;
+    height: 0;
+    top: 40px;
+    bottom: 0;
+    z-index: 1;
+    padding: 0 15px;
+  }
+
+  &__point {
+    width: 38px;
+    height: 55px;
+    background-image: url("../../img/maps-cursor.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  @media @tablet {
+    height: 90vh;
+    min-height: 350px;
+  }
+}

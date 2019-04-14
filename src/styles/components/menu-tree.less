@@ -1,0 +1,91 @@
+.menu-tree {
+
+  &__items-list {
+    list-style-type: none;
+    padding-left: 10px;
+    display: none;
+    padding-top: 10px;
+
+    .menu-tree > & {
+      display: block;
+    }
+  }
+
+  &__link {
+    font-size: 15px;
+    position: relative;
+    display: inline-block;
+    margin-left: 25px;
+    text-decoration: none;
+    width: auto;
+    color: #fff;
+    box-sizing: border-box;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      opacity: 0;
+      bottom: 3px;
+      background: #ffffff;
+      transition: all .3s ease, opacity .5s ease-out;
+      width: 1px;
+      left: 50%;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+        bottom: -1px;
+        width: 100%;
+        left:0;
+      }
+    }
+  }
+
+  &__root {
+    .size(18px);
+    display: block;
+    position: absolute;
+    z-index: 2;
+
+    &:before {
+      .size(18px);
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: background .15s ease-in-out;
+      background-image: url("../../img/tree-close.svg");
+
+    }
+
+    &.open {
+      &:before {
+        background-image: url("../../img/tree-open.svg");
+      }
+    }
+
+    &.open ~ .menu-tree__items-list {
+      display: block;
+    }
+  }
+
+  &__item-root {
+    position: relative;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  &__item {
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+

@@ -1,0 +1,221 @@
+.basket-table {
+
+  &_order {
+    padding: 30px;
+  }
+
+  &__image-link {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      .size(100%);
+      object-fit: cover;
+      display: block;
+    }
+
+    &:before {
+      .size(100%);
+      z-index: 1;
+      position: absolute;
+      content: "";
+      background-color: rgba(0, 0, 0, 0.3);
+      background-image: url("../../img/zoom.svg");
+      background-position: center;
+      background-size: 30px;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transform: scale(1.2);
+      transition: all .5s ease;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__title {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000;
+    padding-bottom: 30px;
+  }
+
+  &__row {
+    display: flex;
+    min-height: 70px;
+    border-top: 1px solid #11A9B7;
+    padding: 13px 0;
+    position: relative;
+
+    &:last-child {
+      border-bottom: 1px solid #11A9B7;
+    }
+  }
+
+  &__cell {
+    flex: 1 1 100px;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    &_index {
+      flex: 0 0 40px;
+    }
+
+    &_price {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &_name {
+      flex: 10 0 0;
+      display: block;
+      text-align: center;
+    }
+
+    &_image {
+      flex: 0 0 95px;
+      padding: 0;
+    }
+
+    &_coast {
+      justify-content: flex-end;
+    }
+  }
+
+  &__index {
+    .size(28px);
+    background: #11A9B7;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+  }
+
+  &__name {
+    color: #0A3F5A;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 17px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      opacity: 0;
+      bottom: 5px;
+      background: #0A3F5A;
+      transition: height, opacity .3s ease, bottom .3s ease-in-out;
+      width: 100%;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+        bottom: -1px;
+      }
+    }
+  }
+
+  &__price {
+    font-size: 15px;
+    text-align: right;
+    color: #000000;
+  }
+
+  &__price-type {
+    font-size: 13px;
+    text-align: right;
+    color: #929292;
+  }
+
+  &__coast {
+    color: #000000;
+  }
+
+  &__delete_product {
+    .size(14px, 16px);
+    position: absolute;
+    right: 13px;
+    bottom: 13px;
+    background: url("../../img/basket-icon.svg") no-repeat;
+    background-size: contain;
+    content: '';
+    transition: background .3s ease;
+
+    &:hover {
+      background: url("../../img/basket-icon-i.svg") no-repeat;
+    }
+  }
+
+  @media @tablet {
+    &__row {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__delete_product {
+      bottom: unset;
+      top: 13px;
+    }
+
+    &__index {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+    }
+
+    &__cell {
+      flex: 1 1 100%;
+      padding-top: 7px;
+      padding-bottom: 7px;
+
+      &_index {
+        flex: 1 0 0;
+      }
+
+      &_image {
+        flex: 1 1 95px;
+        order: 0;
+      }
+
+      &_name {
+        order: 1;
+      }
+
+      &_quantity {
+        order: 2;
+        display: flex;
+        justify-content: center;
+      }
+
+      &_price {
+        order: 3;
+        align-self: flex-start;
+        flex: 1 1 40px;
+        display: flex;
+        align-items: flex-end;
+        padding-right: 14px;
+      }
+
+      &_coast {
+        order: 3;
+        align-self: flex-end;
+        flex: 1 1 40px;
+        margin-bottom: auto;
+        padding-left: 14px;
+        justify-content: flex-start;
+      }
+    }
+  }
+}

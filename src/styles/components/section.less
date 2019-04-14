@@ -1,0 +1,147 @@
+.section {
+  padding-top: 16px;
+  padding-bottom: 100px;
+  background-color: #E5E5E5;
+  background-image: url("../../img/bg.png");
+  color: rgba(0, 0, 0, 0.75);
+
+  &_page {
+    &_partner {
+      padding-bottom: 0;
+    }
+  }
+
+  &_dark {
+    background: #11A9B7 none;
+    color: #fff;
+
+    .page-title__underline {
+      background: #fff;
+    }
+  }
+
+  &__buttons-block {
+    padding-top: 46px;
+    display: flex;
+    justify-content: center;
+
+    &_page {
+      &_news {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &__inner {
+    &_catalog {
+      display: flex;
+    }
+
+    &_basket {
+      display: flex;
+    }
+  }
+
+  &__side-bar {
+    width: 264px;
+    padding-right: 40px;
+
+    &_right {
+      padding-right: 0;
+      padding-left: 40px;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  &__breadcrumbs {
+    &_mobile {
+      display: none;
+    }
+  }
+
+  &__page-title {
+    &_mobile {
+      display: none;
+    }
+  }
+
+  &__tabs {
+    margin-top: 48px;
+  }
+
+  &__date {
+    width: 200px;
+  }
+
+  &_main {
+    padding-top: 40px;
+  }
+
+  &__product-image {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  @media @desktop {
+    padding-top: 0;
+    padding-bottom: 22px;
+
+    &__inner_basket {
+      flex-direction: column-reverse;
+    }
+
+    &__side-bar_right {
+      width: 100%;
+      padding: 0 0 40px 0;
+    }
+
+  }
+
+  @media @tablet {
+    padding-bottom: 22px;
+
+    &__date {
+      padding-bottom: 12px;
+      width: 100%;
+    }
+
+    &__page-title {
+      &_mobile {
+        display: block;
+      }
+
+      &_desktop {
+        display: none;
+      }
+    }
+
+    &__breadcrumbs {
+      &_mobile {
+        display: block;
+      }
+
+      &_desktop {
+        display: none;
+      }
+    }
+
+    &__subtitle {
+      display: block;
+      margin-left: 19px;
+    }
+
+    &__inner_catalog {
+      flex-direction: column;
+    }
+
+    &__side-bar {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+.product-table {
+  margin: 0 18px;
+
+  &_no-margin {
+    margin: 0;
+  }
+
+  &__line {
+    display: flex;
+
+    &_type {
+      &_header {
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  &__cell {
+    flex: 1;
+    display: flex;
+    padding-left: 5px;
+    padding-right: 5px;
+    flex-wrap: wrap;
+
+    &_position {
+      &_left {
+        flex: none;
+        width: 200px;
+      }
+
+      &_right {
+        flex: none;
+        width: 350px;
+      }
+    }
+  }
+
+  &__property-name {
+    line-height: 25px;
+    font-size: 15px;
+    color: #929292;
+    padding-right: 5px;
+
+    &_color {
+      &_dark {
+        color: #000000;
+      }
+    }
+
+    &_type {
+      &_header {
+        font-weight: bold;
+      }
+    }
+
+    &_align {
+      &_right {
+        text-align: right;
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__tabulator {
+    flex: 1;
+    position: relative;
+    top: 18px;
+    border-top: 2px dotted #11a9b7;
+  }
+
+  &__property-value {
+    line-height: 25px;
+    font-size: 15px;
+    color: #000000;
+
+    &_type {
+      &_header {
+        font-weight: bold;
+      }
+    }
+  }
+
+  @media @tablet {
+    &__line {
+      flex-direction: column;
+    }
+
+    &__line:not(&__line_type_header) {
+      .product-table__property-name {
+        font-weight: 500;
+      }
+    }
+
+    &__property-value_type_header {
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.nav-top {
+  background: #11A9B7;
+  box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.1);
+  padding-top: 11px;
+  padding-bottom: 12px;
+  min-width: 320px;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 38px;
+    color: #fff;
+    text-decoration: none;
+    .link-with-icon();
+  }
+
+  &__menu-toggle {
+    margin-left: auto;
+    position: relative;
+    .size(29px, 17px);
+
+    &:before {
+      .pseudo;
+      top: -5px;
+      .size(29px);
+      background: url("../../img/icon-menu-exit.svg") no-repeat;
+      background-size: contain;
+    }
+  }
+}

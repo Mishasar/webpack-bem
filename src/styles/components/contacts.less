@@ -1,0 +1,95 @@
+.contacts {
+  &__row {
+    display: flex;
+
+    &_inline {
+      display: inline-block;
+    }
+
+    &_footer {
+      padding-top: 100px;
+    }
+
+    &_header {
+      justify-content: space-between;
+      padding-bottom: 70px;
+    }
+  }
+
+  &__cell {
+    flex: 1;
+    padding: 7px;
+  }
+
+  &__column {
+    flex: 1;
+  }
+
+  &__header-name {
+    line-height: 21px;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.5);
+    display: block;
+  }
+
+  &__header-value {
+    text-decoration: none;
+    color: #000;
+
+    &_tel {
+      font-weight: 300;
+      line-height: 42px;
+      font-size: 30px;
+    }
+
+    &_email {
+      line-height: 38px;
+      font-size: 27px;
+      color: #11A9B7;
+      border-bottom: 1px solid #11A9B7;
+    }
+
+    &_address {
+      font-weight: 300;
+      line-height: 25px;
+      font-size: 18px;
+    }
+  }
+
+  &__footer-name {
+    font-size: 15px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.8);
+    padding-right: 10px;
+    word-wrap: normal;
+  }
+
+  &__footer-value {
+    line-height: 26px;
+    font-size: 15px;
+    color: #000000;
+
+    &_name {
+      clear:both;
+    }
+
+    &_tel {
+      text-decoration: none;
+      float: left;
+      clear:both;
+    }
+
+    &_email {
+      float: left;
+      clear:both;
+      font-weight: bold;
+      color: #11A9B7;
+    }
+  }
+
+  @media @tablet {
+    &__row {
+      flex-direction: column;
+    }
+  }
+}
