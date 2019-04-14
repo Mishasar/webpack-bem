@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import 'babel-polyfill';
 import printMe from './print.js';
 
 function component() {
