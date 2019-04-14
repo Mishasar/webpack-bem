@@ -2,13 +2,15 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+	mode: 'development',
 	entry: {
-		polyfills: './src/polyfills.js',
-		app: './src/index.js',
-		print: './src/print.js',
-		another: './src/another-module.js',
+		polyfills: './src/scripts/polyfills.js',
+		app: './src/scripts/index.js',
+		print: './src/scripts/print.js',
+		another: './src/scripts/another-module.js',
 	},
 	devtool: 'inline-source-map',
 	devServer: {
@@ -17,16 +19,22 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({
-			title: 'Output Management',
+			template: './src/pages/index.html',
+			excludeChunks: ['polyfills'],
 		}),
 		new webpack.ProvidePlugin({
 			_: 'lodash',
 		}),
-	],
+		new MiniCssExtractPlugin({
+			// Options similar to the same options in webpackOptions.output
+			// both options are optional
+			filename: '[name].css',
+			chunkFilename: '[id].css',
+		})],
 	output: {
 		filename: '[name].bundle.js',
 		path: path.resolve(__dirname, 'dist'),
-		publicPath: '/',
+		publicPath: '',
 	},
 	optimization: {
 		splitChunks: {
@@ -39,14 +47,14 @@ module.exports = {
 			},
 		},
 	},
-	externals: {
-		lodash: {
-			commonjs: 'lodash',
-			commonjs2: 'lodash',
-			amd: 'lodash',
-			root: '_',
-		},
-	},
+	// externals: {
+	// 	lodash: {
+	// 		commonjs: 'lodash',
+	// 		commonjs2: 'lodash',
+	// 		amd: 'lodash',
+	// 		root: '_',
+	// 	},
+	// },
 	module: {
 		rules: [
 			{
@@ -59,6 +67,18 @@ module.exports = {
 					},
 				},
 			},
+			{
+				test: /\.(less)$/,
+				use: [
+					MiniCssExtractPlugin.loader,
+					"css-loader",
+					"less-loader"
+				]
+			},
+			{
+				test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/,
+				use: "url-loader"
+			}
 		],
 	},
 };

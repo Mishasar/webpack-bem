@@ -1,6 +1,6 @@
 import _ from 'lodash';
-import 'babel-polyfill';
 import printMe from './print.js';
+import '../styles/index.less';
 
 function component() {
 	let element = document.createElement('div');
